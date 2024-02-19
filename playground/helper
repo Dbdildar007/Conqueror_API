@@ -1,0 +1,65 @@
+
+// const uploadf = multer({
+//     limits: {
+//         fileSize: 10000000
+//     },
+//     fileFilter(req, file, cb) {
+//         if (!file.originalname.match(/\.(jpg|jpeg|png)$/)) {
+//             return cb(new Error('Please upload an image'))
+//         }
+
+//         cb(undefined, true)
+//     }
+// })
+
+// app.post('/users/me/avatar', uploadf.single('profile_pic'), async (req, res) => {
+//     try{
+//         let data = req.body;
+//      let  {team_name,number,profile_pic,state,total_balance,added_cash,bonus,total_kill,winning_percentage} = data;
+//         console.log(data);
+
+//         let ssv = new User({team_name,number,profile_pic,state})
+//         await ssv.save().then((reponse)=>{
+//             console.log(reponse);
+//         }).catch((error)=>{
+//             console.log(error);
+//         })
+//     }catch{
+//         console.log("catch error")
+//     }
+// })
+
+
+
+
+/*
+User.updateOne({username:'diididdi'}, 
+    {$inc:{Balance:5}}).then((respo)=>{
+        console.log(respo)
+    }).catch((err)=>{
+        console.log(err)
+    });
+    */
+
+
+
+//multer
+
+/* const storage =  multer.diskStorage({
+
+      destination:function(req,file,cb){
+const dest = path.dirname('./public/imageContainer');
+          cb(null,dest,function(error,success){
+              if(error) throw error
+          })
+      },
+      filename:function(req,file,cb){
+          let name = Date.now()+ '-'+file.originalname;
+          cb(null,name,function(error,succeccfully){
+              if(error) throw error;
+          })
+      }
+  })
+
+  const upload = multer({storage:storage});
+  */
